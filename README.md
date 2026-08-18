@@ -10,13 +10,8 @@ of the ~1 GB of Electron-based clients, built with Rust and native webviews.
 brew install --cask cheat2001/tap/angkorgit
 ```
 
-macOS may quarantine the app because it is not yet notarized. Either install with:
-
-```sh
-brew install --cask cheat2001/tap/angkorgit --no-quarantine
-```
-
-or clear the flag after installing:
+macOS quarantines the app because it is not yet notarized. Clear the flag after
+installing (recent Homebrew versions removed the `--no-quarantine` option):
 
 ```sh
 xattr -cr /Applications/AngKorGit.app
