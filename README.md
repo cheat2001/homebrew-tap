@@ -10,12 +10,9 @@ of the ~1 GB of Electron-based clients, built with Rust and native webviews.
 brew install --cask cheat2001/tap/angkorgit
 ```
 
-macOS quarantines the app because it is not yet notarized. Clear the flag after
-installing (recent Homebrew versions removed the `--no-quarantine` option):
-
-```sh
-xattr -cr /Applications/AngKorGit.app
-```
+That's it — the cask clears the Gatekeeper quarantine flag automatically after
+install (AngKorGit is open source but not yet notarized with Apple). If macOS
+ever still complains, run `xattr -cr /Applications/AngKorGit.app`.
 
 ## Upgrade
 

@@ -16,9 +16,15 @@ cask "angkorgit" do
 
   app "AngKorGit.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/AngKorGit.app"]
+  end
+
   caveats <<~EOS
-    AngKorGit is not yet notarized with Apple. If macOS reports the app as
-    damaged or from an unidentified developer, clear the quarantine flag:
+    The Gatekeeper quarantine flag is cleared automatically after install
+    (AngKorGit is open source but not yet notarized with Apple). If macOS
+    still reports the app as damaged, run:
 
       xattr -cr /Applications/AngKorGit.app
   EOS
