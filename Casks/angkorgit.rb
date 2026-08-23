@@ -1,6 +1,6 @@
 cask "angkorgit" do
-  version "0.6.4"
-  sha256 "c7b590ac6bab38bf1ed57f2d92fd9e098c66f0c59403d4a02fe1d0f31b12c540"
+  version "0.6.5"
+  sha256 "efa559e293a844ecae9638afa7bcb96672d6a3abf7ef91c516448863d2d438a3"
 
   url "https://github.com/cheat2001/angkorgit/releases/download/v#{version}/AngKorGit_#{version}_universal.dmg"
   name "AngKorGit"
