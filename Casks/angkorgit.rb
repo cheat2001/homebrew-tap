@@ -16,9 +16,8 @@ cask "angkorgit" do
 
   app "AngKorGit.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/AngKorGit.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/AngKorGit.app"]
   end
 
   caveats <<~EOS
